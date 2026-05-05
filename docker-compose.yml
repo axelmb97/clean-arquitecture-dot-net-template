@@ -38,14 +38,15 @@ services:
       timeout: 5s
       retries: 5
 
-  # template-seq-db:
-  #   image: datalust/seq:2025
-  #   container_name: template-seq-db
-  #   environment:
-  #     - ACCEPT_EULA=Y
-  #   ports:
-  #     - 5341:5341
-  #     - 8083:80
+  template-seq-db:
+    image: datalust/seq:2025
+    container_name: template-seq-db
+    environment:
+      - ACCEPT_EULA=Y
+      - SEQ_FIRSTRUN_ADMINPASSWORD=123456
+    ports:
+      - 5341:5341
+      - 8083:80
       
 volumes:
   template-db-volume:
