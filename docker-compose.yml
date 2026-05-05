@@ -15,7 +15,7 @@ services:
   #     template-db:
   #       condition: service_healthy
   #   networks:
-  #     -template-app-net
+  #     - template-app-net
 
   template-db:
     image: mysql:8.0
